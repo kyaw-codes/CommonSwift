@@ -103,7 +103,7 @@ public extension Int {
     ///
     ///```
     ///// Return 10,000 $
-    ///10000.toCurrency(with: "$")
+    ///10000.toCurrency()
     ///
     ///// Return $ 10,000
     ///10000.toCurrency(with: "$", symbolPositionTrailing: false)
@@ -114,7 +114,7 @@ public extension Int {
     ///   - symbolPositionTrailing: If `true`, the symbol will be attached to the trailing side of the string, otherwise, the leading side
     ///   - default: Default value if anything went wrong
     /// - Returns: Currency string
-    func toCurrency(with symbol: String = "", symbolPositionTrailing: Bool = true, default: String = "") -> String {
+    func toCurrency(with symbol: String = "$", symbolPositionTrailing: Bool = true, default: String = "") -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         
