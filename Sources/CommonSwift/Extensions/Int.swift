@@ -44,6 +44,14 @@ public extension Int {
         return self % 2 == 0
     }
     
+    var degreesToRadians: Double {
+        return Double.pi * Double(self) / 180.0
+    }
+    
+    var radiansToDegrees: Double {
+        return Double(self) * 180 / Double.pi
+    }
+    
     var string: String {
         return String(self)
     }
@@ -97,7 +105,6 @@ public extension Int {
         
         return numberFormatter.string(from: NSNumber(value: self)) ?? "0"
     }
-    
     
     /// Convert `Int` to coma formatted string with currency symbol
     ///
