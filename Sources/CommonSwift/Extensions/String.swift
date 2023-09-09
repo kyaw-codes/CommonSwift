@@ -64,10 +64,10 @@ public extension String {
     ///
     /// - Returns: `Optional<Bool>`
     func toBool() -> Bool? {
-        switch self {
-        case "True", "true", "yes", "1":
+        switch self.lowercased() {
+        case "true", "yes", "1":
             return true
-        case "False", "false", "no", "0":
+        case "false", "no", "0":
             return false
         default:
             return nil
@@ -99,10 +99,10 @@ public extension String {
     ///
     /// - Returns: `Optional<Int>`
     func toIntFlag() -> Int? {
-        switch self {
-        case "True", "true", "yes", "1":
+        switch self.lowercased() {
+        case "true", "yes", "1":
             return 1
-        case "False", "false", "no", "0":
+        case "false", "no", "0":
             return 0
         default:
             return nil
